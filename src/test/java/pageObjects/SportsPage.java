@@ -39,13 +39,11 @@ public class SportsPage extends BaseClass {
     public void navigateTo(String menuName) {
         if (menuName.equals("sports")) {
             WaitUntilElementVisible(this.sportsLink);
-            this.sportsLink.isDisplayed();
             this.sportsLink.click();
         }
 
         if (menuName.equals("football")) {
             WaitUntilElementVisible(this.footballLink);
-            this.footballLink.isDisplayed();
             this.footballLink.click();
         }
     }

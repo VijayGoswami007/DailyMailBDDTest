@@ -6,6 +6,7 @@ import io.cucumber.java.en.Then;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pageObjects.SportsPage;
 import utility.DateHelper;
@@ -19,12 +20,13 @@ public class SportsPageSteps {
     private WebDriver driver = Hooks.driver;
     private WebDriverWait wait;
     private SportsPage sportsPage;
-
+    private  String gdprXpath = "//div[@class='footer_GqesM']//button[2]";
     public SportsPageSteps() throws Exception {
         PropertiesReader propertiesReader = new PropertiesReader();
         this.wait = new WebDriverWait(driver, propertiesReader.getTimeout());
-        Thread.sleep(1000); // Wait for the GDPR button to fade away.
-        driver.findElement(new By.ByXPath("//div[@class='footer_GqesM']//button[2]")).click();
+        // Wait for the GDPR button to fade away.
+        this.wait.until(ExpectedConditions.visibilityOfElementLocated(new By.ByXPath(gdprXpath)));
+        driver.findElement(new By.ByXPath(gdprXpath)).click();
     }
 
     @Given("^I am visiting the Homepage$")

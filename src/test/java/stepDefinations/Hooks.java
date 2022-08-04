@@ -24,7 +24,7 @@ public class Hooks {
         PropertiesReader propertiesReader = new PropertiesReader();
         ChromeOptions options = new ChromeOptions();
         options.addArguments(
-                //"--headless",
+                "--headless",
                 "--window-size=1440,768",
                 "--disable-gpu");
 
