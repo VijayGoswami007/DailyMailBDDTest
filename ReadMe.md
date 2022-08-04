@@ -23,4 +23,4 @@
 
 ## You should see the result with all test passed
 
-![This is an image](https://github.com/VijayGoswami007/DailyMailBDDTest/blob/5b7581035e03bf23dfc75960a26ca0141bb1933f/testresults.png)
+![This is an image](https://github.com/VijayGoswami007/DailyMailBDDTest/blob/44f1823cc566229c3f385ffb2d23da8e2f5ad19e/testresults.png)
